@@ -118,7 +118,7 @@
                         <button
                             class="btn btn-search d-flex justify-content-center align-items-center p-0"
                             type="button">
-                            <img src="{{asset('img/ic_search.svg')}}" width="20px" height="20px"/>
+                            <img src="{{asset('/img/ic_search.svg')}}" width="20px" height="20px"/>
                         </button>
                         <img src=" {{asset('/img/avatar.jpg')}}" alt="Photo Profile" class="avatar"/>
                     </div>
