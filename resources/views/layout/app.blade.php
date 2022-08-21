@@ -7,7 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="author" content="Rachma | @rachmadzii"/>
 
-        <title>Menarra Finance - Dashboard</title>
+        <title>
+            {{config('app_name', 'Furniture')}}
+        </title>
 
         <!-- Scrollbar Custom CSS -->
         <link
@@ -16,10 +18,10 @@
 
         <!-- Bootstrap CSS -->
         <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
             rel="stylesheet"
-            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-            crossorigin="anonymous"/>
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+            crossorigin="anonymous">
 
         <!-- External CSS -->
         <link
@@ -52,23 +54,81 @@
             <div class="pt-2 d-flex flex-column gap-5">
                 <div class="menu p-0">
                     <p>Daily Use</p>
-                    <a href="#" class="item-menu active">
+                    <a href="/overview " class="item-menu active">
                         <i class="icon ic-stats"></i>
                         Overview
                     </a>
-                    <a href="#" class="item-menu">
+                    {{-- <a href="/purchase" class="item-menu dropdown">
                         <i class="icon ic-trans"></i>
                         Purchase
-                    </a>
-                    <a href="#" class="item-menu">
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another action</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </a> --}}
+                    {{-- <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown button
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </div> --}}
+
+                      <li class="item-menu dropdown">
+                        <i class="icon ic-stats"></i>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Purchase
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/purchase">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <li class="item-menu dropdown">
+                        <i class="icon ic-msg"></i>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/product">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                    {{-- <a href="/product" class="item-menu">
                         <i class="icon ic-msg"></i>
                         Product
-                    </a>
-                    <a href="#" class="item-menu">
+                    </a> --}}
+                    <li class="item-menu dropdown">
+                        <i class="icon ic-stats"></i>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Report
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/report">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                    {{-- <a href="/report" class="item-menu">
                         <i class="icon ic-stats"></i>
                         Report
-                    </a>
-                    <a href="#" class="item-menu">
+                    </a> --}}
+                    <a href="/account" class="item-menu">
                         <i class="icon ic-account"></i>
                         Account
                     </a>
@@ -92,118 +152,8 @@
         </nav>
 
         <!-- Main Content -->
-        <main class="content">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <div>
-                        <button
-                            class="sidebarCollapseDefault btn p-0 border-0 d-none d-md-block"
-                            aria-label="Hamburger Button">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                        <button
-                            data-bs-toggle="offcanvas"
-                            data-bs-target=".sidebar"
-                            aria-controls="sidebar"
-                            aria-label="Hamburger Button"
-                            class="sidebarCollapseMobile btn p-0 border-0 d-block d-md-none">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-end gap-4">
-                        <input
-                            type="text"
-                            placeholder="Search report or product"
-                            class="search form-control"/>
-                        <button
-                            class="btn btn-search d-flex justify-content-center align-items-center p-0"
-                            type="button">
-                            <img src="{{asset('/img/ic_search.svg')}}" width="20px" height="20px"/>
-                        </button>
-                        <img src=" {{asset('/img/avatar.jpg')}}" alt="Photo Profile" class="avatar"/>
-                    </div>
-                </div>
-            </nav>
-            <section class="p-3">
-                <header>
-                    <h3>Overview</h3>
-                    <p>Manage data for growth</p>
-                </header>
-                <div class="information d-flex flex-column gap-5">
-                    <div class="row px-1 mb-2 gap-5">
-                        <div class="col-xl-4 col-12 card debit">
-                            <img src="{{asset('/img/ic_card.svg')}} " alt="Debit" width="54px"/>
-                            <p class="number">•••• &nbsp;&nbsp; 2208 &nbsp;&nbsp; 1996</p>
-                            <div>
-                                <p class="fw-semibold m-0">Shayna Qowy</p>
-                                <p class="fw-light m-0">20/24</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-12 card balance">
-                            <p>My Balance</p>
-                            <h2>$90,500,000</h2>
-                            <div>
-                                <p class="m-0 fw-bold">+22%</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-12 card donut-chart m-lg-0 p-2">
-                            <div>
-                                <canvas id="chart-budget" style="height: 226px; width: 100%"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row px-1 d-flex justify-content-between">
-                        <div class="col-xl-6 col-12 p-0 mb-5 mb-xl-0 revenue">
-                            <h5>Revenue Past 6 Months</h5>
-                            <div>
-                                <canvas id="chart-revenue" width="100%"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-12 p-0 ps-xl-4 transaction">
-                            <h5>Latest Transactions</h5>
-                            <div class="d-flex flex-column gap-4">
-                                <div class="d-flex flex-row gap-3">
-                                    <div class="icon-history">
-                                        <img src=" {{asset('/img/ic_spotify.svg')}}" width="32" height="32"/>
-                                    </div>
-                                    <div class="trans-history flex-fill">
-                                        <div>
-                                            <p class="m-0 title">Spotify</p>
-                                            <p class="m-0 date">12 Jan</p>
-                                        </div>
-                                        <p class="m-0 outcome">- $20,000</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-row gap-3">
-                                    <div class="icon-history">
-                                        <img src="{{asset('/img/ic_receive_act.svg')}}" width="32" height="32"/>
-                                    </div>
-                                    <div class="trans-history flex-fill">
-                                        <div>
-                                            <p class="m-0 title">Top Up BCA</p>
-                                            <p class="m-0 date">12 Jan</p>
-                                        </div>
-                                        <p class="m-0 income">+ $120,000</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-row gap-3">
-                                    <div class="icon-history">
-                                        <img src="{{asset('/img/ic_send_act.svg')}}" width="32" height="32"/>
-                                    </div>
-                                    <div class="trans-history flex-fill">
-                                        <div>
-                                            <p class="title m-0">Send to @anggapro</p>
-                                            <p class="date m-0">12 Jan</p>
-                                        </div>
-                                        <p class="outcome m-0">- $6,000</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+
+        @yield('content')
 
         <!-- Bootstrap JS -->
         <script
@@ -212,8 +162,8 @@
             crossorigin="anonymous"></script>
 
         <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
             crossorigin="anonymous"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>

@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// route bawaan default laravel
 Route::get('/', function () {
-    return view('/layout/app');
+	// return view('/layout/app');
+	return view(' /pages/overview');
+
 });
+
+// route blog
+Route::get('/overview', function () {
+	return view('/pages/overview');
+});
+Route::get('/purchase', function () {
+	return view('/pages/purchase');
+});
+Route::get('/product', function () {
+	return view('/pages/product');
+});
+// Route::get('/blog/kontak', 'BlogController@kontak');
