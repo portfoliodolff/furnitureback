@@ -56,7 +56,7 @@
                     <p>Daily Use</p>
                     <a href="/overview " class="item-menu active">
                         <i class="icon ic-stats"></i>
-                        Overview
+                        Master Data
                     </a>
                     {{-- <a href="/purchase" class="item-menu dropdown">
                         <i class="icon ic-trans"></i>
@@ -87,25 +87,25 @@
                       <li class="item-menu dropdown">
                         <i class="icon ic-stats"></i>
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Purchase
+                          Pembelian
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="/purchase">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          <li><a class="dropdown-item" href="/listpurchase">Daftar Pembelian</a></li>
+                          <li><a class="dropdown-item" href="#">Pesanan Pembelian</a></li>
+                          {{-- <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                         </ul>
                       </li>
                       <li class="item-menu dropdown">
                         <i class="icon ic-msg"></i>
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Product
+                            Penjualan
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="/product">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          <li><a class="dropdown-item" href="/product">Penjualan Kasir</a></li>
+                          <li><a class="dropdown-item" href="#">Daftar Penjualan</a></li>
+                          {{-- <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                         </ul>
                       </li>
                     {{-- <a href="/product" class="item-menu">
@@ -115,13 +115,13 @@
                     <li class="item-menu dropdown">
                         <i class="icon ic-stats"></i>
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Report
+                            Laporan
                         </a>
                         <ul class="dropdown-menu">
                           <li><a class="dropdown-item" href="/report">Action</a></li>
                           <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          {{-- <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                         </ul>
                       </li>
                     {{-- <a href="/report" class="item-menu">

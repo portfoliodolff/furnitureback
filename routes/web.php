@@ -25,9 +25,12 @@ Route::get('/overview', function () {
 	return view('/pages/overview');
 });
 Route::get('/purchase', function () {
-	return view('/pages/purchase');
+	return view('/pages/Purchase/purchase');
 });
 Route::get('/product', function () {
-	return view('/pages/product');
+	return view('/pages/Product/product');
+});
+Route::get('/listpurchase', function () {
+	return view('/pages/Purchase/purchaselist');
 });
 // Route::get('/blog/kontak', 'BlogController@kontak');
